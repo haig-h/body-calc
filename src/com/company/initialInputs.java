@@ -1,21 +1,32 @@
 package com.company;
-import java.util.Scanner;
+
 
 public class initialInputs {
-    Scanner sc = new Scanner(System.in);
-    private static double bodyWeight;
+    private double bodyWeight;
     private double height;
     private double age;
 
 
-    public static double bodyInputs(){
-        Scanner sc = new Scanner(System.in);
+    public initialInputs(double bodyWeight, double height, double age){
         this.bodyWeight = bodyWeight;
-        System.out.print("Hello, please enter your body weight: ");
-        double bodyWeight = sc.nextDouble();
-        return bodyWeight;
+        this.height = height;
+        this.age = age;
+
     }
+
     public double getBodyWeight(){
+        System.out.println("Your body weight is " + bodyWeight);
         return bodyWeight;
     }
+    public double getHeight(){
+        System.out.println("Your height is " + height);
+        return height;
+    }
+    public double getAge(){
+        System.out.println("Your age is " + age);
+        return age;
+    }
+
 }
+
+
