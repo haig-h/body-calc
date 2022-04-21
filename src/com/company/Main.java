@@ -10,10 +10,12 @@ public class Main {
     }
     public static void initial(){
         Scanner sc = new Scanner(System.in);
-        initialInputs inputs = new initialInputs(sc.nextDouble(), sc.nextDouble(), sc.nextDouble());
+        initialInputs inputs = new initialInputs(sc.nextLine(), sc.nextDouble(), sc.nextDouble(), sc.nextDouble());
 
+        inputs.getName();
         inputs.getBodyWeight();
         inputs.getHeight();
         inputs.getAge();
+
     }
 }
