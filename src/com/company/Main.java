@@ -10,7 +10,7 @@ public class Main {
     }
     public static void initial(){
         Scanner sc = new Scanner(System.in);
-        initialInputs inputs = new initialInputs(sc.nextLine(), sc.nextDouble(), sc.nextDouble(), sc.nextDouble(), sc.nextBoolean());
+        initialInputs inputs = new initialInputs(sc.nextLine(), sc.nextDouble(), sc.nextDouble(), sc.nextDouble(), sc.nextInt());
 
         inputs.getName();
         inputs.getBodyWeight();

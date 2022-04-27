@@ -6,10 +6,10 @@ public class initialInputs {
     public static double bodyWeight;
     public static double height;
     public static double age;
-    public static boolean gender;
+    public static int gender;
 
 
-    public initialInputs(String name, double bodyWeight, double height, double age, boolean gender){
+    public initialInputs(String name, double bodyWeight, double height, double age, int gender){
         super();
         this.name = name;
         this.bodyWeight = bodyWeight;
@@ -40,10 +40,16 @@ public class initialInputs {
         return bodyWeight = bodyWeight;
     }
 
-    public boolean getGender(){
+    public int getGender(){
+        if(gender == 0){
+            System.out.println("You are a male");
+        }
+        else if(gender == 1){
+            System.out.println("You are female");
+        }
         return gender;
     }
-    public boolean setGender(){
+    public int setGender(){
         return gender = gender;
     }
 }
