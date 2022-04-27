@@ -6,14 +6,16 @@ public class initialInputs {
     public static double bodyWeight;
     public static double height;
     public static double age;
+    public static boolean gender;
 
 
-    public initialInputs(String name, double bodyWeight, double height, double age){
+    public initialInputs(String name, double bodyWeight, double height, double age, boolean gender){
         super();
         this.name = name;
         this.bodyWeight = bodyWeight;
         this.height = height;
         this.age = age;
+        this.gender = gender;
 
     }
     public String getName(){
@@ -38,6 +40,12 @@ public class initialInputs {
         return bodyWeight = bodyWeight;
     }
 
+    public boolean getGender(){
+        return gender;
+    }
+    public boolean setGender(){
+        return gender = gender;
+    }
 }
 
 
