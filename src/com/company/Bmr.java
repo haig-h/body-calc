@@ -18,12 +18,15 @@ public class Bmr {
             double getBmrP1 = (10 * getBodyWeight());
             double getBmrP2 = (6.25 * getHeight());
             double getBmrP3 = (5*getAge() + 5);
-            double getBmr = getBmrP1*getBmrP2-getBmrP3;
+            double getBmrP4 = getBmrP1*getBmrP2;
+            double getBmr = getBmrP4-getBmrP3;
             return getBmr;
     }
 
     public static void main(){
         System.out.println("Your bmr is " + getBmr());
+
+
 
     }
 }

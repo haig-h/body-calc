@@ -44,6 +44,14 @@ public class InitialInputs {
     public int setGender(){
         return gender = gender;
     }
+    public void main(){
+        System.out.println("Your name is " + getName());
+        System.out.println("Your weight is " + getBodyWeight());
+        System.out.println("Your height is " + getHeight());
+        System.out.println("Your age is " + getAge());
+        System.out.println("Your gender is " + getGender());
+
+    }
 }
 
 
