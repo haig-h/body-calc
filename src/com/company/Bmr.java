@@ -1,6 +1,8 @@
 package com.company;
 
 import static com.company.InitialInputs.*;
+public const int SEX=0;
+//determines int for male/female
 
 public class Bmr {
     private double weight;
@@ -15,12 +17,22 @@ public class Bmr {
         gender = InitialInputs.getGender();
     }
     public static double getBmr(){
+        if (gender== SEX){
             double getBmrP1 = (6.23 * getBodyWeight());
             double getBmrP2 = (12.7 * getHeight());
             double getBmrP3 = (6.8 * getAge());
             double getBmrP4 = getBmrP1 + getBmrP2;
             double getBmr = getBmrP4-getBmrP3 +66;
             return getBmr;
+        }
+        else{
+            double getBmrP1 = (4.35 * getBodyWeight());
+            double getBmrP2 = (4.7 * getHeight());
+            double getBmrP3 = (4.7 * getAge());
+            double getBmrP4 = getBmrP1 + getBmrP2;
+            double getBmr = getBmrP4-getBmrP3 +66;
+            return getBmr;
+        }
     }
 
     public static void main(){
