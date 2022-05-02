@@ -15,11 +15,11 @@ public class Bmr {
         gender = InitialInputs.getGender();
     }
     public static double getBmr(){
-            double getBmrP1 = (10 * getBodyWeight());
-            double getBmrP2 = (6.25 * getHeight());
-            double getBmrP3 = (5*getAge() + 5);
-            double getBmrP4 = getBmrP1*getBmrP2;
-            double getBmr = getBmrP4-getBmrP3;
+            double getBmrP1 = (6.23 * getBodyWeight());
+            double getBmrP2 = (12.7 * getHeight());
+            double getBmrP3 = (6.8 * getAge());
+            double getBmrP4 = getBmrP1 + getBmrP2;
+            double getBmr = getBmrP4-getBmrP3 +66;
             return getBmr;
     }
 
