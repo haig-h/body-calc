@@ -1,15 +1,17 @@
 package com.company;
 
 
+import java.util.Scanner;
+
 public class InitialInputs {
-    private String name;
+    private static String name;
     private static double bodyWeight;
     private static double height;
     private static double age;
     private static int gender;
 
 
-    public InitialInputs(String name, double bodyWeight, double height, double age, int gender){
+    public InitialInputs(){
         super();
         this.name = name;
         this.bodyWeight = bodyWeight;
@@ -18,7 +20,10 @@ public class InitialInputs {
         this.gender = gender;
 
     }
-    public String getName(){
+    public static String getName(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter your name");
+        name = sc.nextLine();
         return name;
     }
     public static double getBodyWeight(){
@@ -45,7 +50,7 @@ public class InitialInputs {
         return gender = gender;
     }
     public void main(){
-        System.out.println("Your name is " + getName());
+        System.out.println("Your name is " + name);
         System.out.println("Your weight is " + getBodyWeight());
         System.out.println("Your height is " + getHeight());
         System.out.println("Your age is " + getAge());

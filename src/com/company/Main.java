@@ -22,10 +22,10 @@ public class Main {
     }
     public static void initial(){
         Scanner sc = new Scanner(System.in);
-        InitialInputs inputs = new InitialInputs(sc.nextLine(), sc.nextDouble(), sc.nextDouble(), sc.nextDouble(), sc.nextInt());
+        InitialInputs inputs = new InitialInputs();
+        InitialInputs.getName();
         inputs.main();
 
-        System.out.println("What's your age? ");
     }
     public static void bmr(){
         Bmr bmr = new Bmr(InitialInputs.getBodyWeight(), InitialInputs.getHeight(),InitialInputs.getAge(),InitialInputs.getGender());
