@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 
+
     public static void main(String[] args) {
         System.out.println("Welcome to the Body Calculator");
         initial();
@@ -13,6 +14,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         InitialInputs inputs = new InitialInputs(sc.nextLine(), sc.nextDouble(), sc.nextDouble(), sc.nextDouble(), sc.nextInt());
         inputs.main();
+
+        System.out.println("What's your age? ");
     }
     public static void bmr(){
         Bmr bmr = new Bmr(InitialInputs.getBodyWeight(), InitialInputs.getHeight(),InitialInputs.getAge(),InitialInputs.getGender());
