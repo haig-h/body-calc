@@ -1,14 +1,14 @@
 package com.company;
 
 import static com.company.InitialInputs.*;
-public const int SEX=0;
 //determines int for male/female
 
 public class Bmr {
+    final static int SEX=0;
     private double weight;
     private double height;
     private double age;
-    private int gender;
+    private static int gender;
 
     public Bmr(double weight, double height, double age, int gender){
         weight = InitialInputs.getBodyWeight();
@@ -17,7 +17,7 @@ public class Bmr {
         gender = InitialInputs.getGender();
     }
     public static double getBmr(){
-        if (gender== SEX){
+        if (gender == SEX){
             double getBmrP1 = (6.23 * getBodyWeight());
             double getBmrP2 = (12.7 * getHeight());
             double getBmrP3 = (6.8 * getAge());
