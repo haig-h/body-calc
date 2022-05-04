@@ -1,6 +1,7 @@
 package com.company;
 
 import static com.company.InitialInputs.*;
+public const int SEX=0;
 //determines int for male/female
 
 public class Bmr {
