@@ -15,6 +15,10 @@ public class Bmr {
         this.age = age;
         this.gender = gender;
     }
+
+    public Bmr() {
+    }
+
     public static double getBmr(){
         if (gender == 1){
             double getBmrP1 = (6.23 * weight);

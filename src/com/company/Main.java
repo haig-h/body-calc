@@ -10,6 +10,7 @@ public class Main {
         System.out.println("Welcome to the Body Calculator");
         initial();
         bmr();
+        activity();
     }
 
     public static void initial() {
@@ -25,5 +26,9 @@ public class Main {
         bmr.main();
 
 
+    }
+    public static void activity(){
+        Activity activitylvl = new Activity();
+        activitylvl.activitymain();
     }
 }
