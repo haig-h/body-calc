@@ -1,6 +1,6 @@
 package com.company;
 
-import static com.company.InitialInputs.*;
+//import static com.company.InitialInputs.*;
 //determines int for male/female
 
 public class Bmr {
