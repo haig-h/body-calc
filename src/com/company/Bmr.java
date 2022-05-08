@@ -35,7 +35,7 @@ public class Bmr {
                 BmrP2 = (4.7 * height);
                 BmrP3 = (4.7 * age);
                 BmrP4 = BmrP1 + BmrP2;
-                Bmr = BmrP4-BmrP3 + 66;
+                Bmr = BmrP4-BmrP3 + 655;
 
                 break;
         }
