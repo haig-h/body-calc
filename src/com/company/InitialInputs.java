@@ -8,7 +8,7 @@ public class InitialInputs {
     private static double bodyWeight;
     private static double height;
     private static double age;
-    private static int gender;
+    private static char gender;
 
 
     public InitialInputs(){
@@ -44,10 +44,10 @@ public class InitialInputs {
         age = sc.nextDouble();
         return age;
     }
-    public static int getGender(){
+    public static char getGender(){
         Scanner sc = new Scanner(System.in);
-        System.out.print("Please enter 1 if you are a male, or 2 if you are female: ");
-        gender = sc.nextInt();
+        System.out.print("Please enter M if you are a Male, or F if you are Female: ");
+        gender = sc.next().charAt(0);
         return gender;
     }
     public String setName(){
@@ -62,7 +62,7 @@ public class InitialInputs {
     public static double setAge(){
         return age = age;
     }
-    public static int setGender(){
+    public static char setGender(){
         return gender = gender;
     }
     public void main(){

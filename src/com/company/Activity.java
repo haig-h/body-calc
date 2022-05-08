@@ -12,19 +12,19 @@ public class Activity extends Bmr{
                int activityChoice = sc.nextInt();
                switch (activityChoice) {
                    case 1:
-                       System.out.println("Your activity adjusted BMR is " + 1.2 * getBmr());
+                       System.out.println("Your activity adjusted BMR is "+ 1.2 * getBmr());
                        break;
                    case 2:
-                       System.out.println("Your activity adjusted BMR is " + 1.375 * getBmr());
+                       System.out.println("Your activity adjusted BMR is "+ 1.375 * getBmr());
                        break;
                    case 3:
-                       System.out.println("Your activity adjusted BMR is " + 1.55 * getBmr());
+                       System.out.println("Your activity adjusted BMR is "+ 1.55 * getBmr());
                        break;
                    case 4:
-                       System.out.println("Your activity adjusted BMR is " + 1.725 * getBmr());
+                       System.out.println("Your activity adjusted BMR is "+ 1.725 * getBmr());
                        break;
                    case 5:
-                       System.out.println("Your activity adjusted BMR is " + 1.9 * getBmr());
+                       System.out.println("Your activity adjusted BMR is "+ 1.9 * getBmr());
                        break;
                }
     }
