@@ -28,13 +28,13 @@ public class InitialInputs {
     }
     public static double getBodyWeight(){
         Scanner sc = new Scanner(System.in);
-        System.out.print("Please enter your Body Weight: ");
+        System.out.print("Please enter your body weight in pounds: ");
         bodyWeight = sc.nextDouble();
         return bodyWeight;
     }
     public static double getHeight(){
         Scanner sc = new Scanner(System.in);
-        System.out.print("Please enter your Height in centimeters? or inches we need to choose: ");
+        System.out.print("Please enter your height in inches: ");
         height = sc.nextDouble();
         return height;
     }
