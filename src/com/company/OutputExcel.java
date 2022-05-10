@@ -38,19 +38,24 @@ public class OutputExcel {
             cell.setCellStyle(headerStyle);
         }
         //7
-
-            /*
+        int b = 1;
+        while(b == 1) {
             Row row = spreadsheet.createRow(1);
+            Cell cells = row.createCell(0);
             row.createCell(0).setCellValue(InitialInputs.getName());
             row.createCell(1).setCellValue(InitialInputs.getBodyWeight());
             row.createCell(2).setCellValue(InitialInputs.getHeight());
             row.createCell(3).setCellValue(InitialInputs.getAge());
             row.createCell(4).setCellValue(Bmr.getBmr());
-           */
+            b++;
+        }
 
-        for(int i=0;i<columnHeadings.length;i++){
+
+       /* for(int i=0;i<columnHeadings.length;i++){
             spreadsheet.autoSizeColumn(i);
         }
+        */
+
 
 
         File f = new File("C:\\GitHub Repositories\\body-calc\\Test.xls");
@@ -60,10 +65,6 @@ public class OutputExcel {
         workbook.close();
 
         System.out.println("Your file has written!");
-    }
-    private static ArrayList<InitialInputs> data1(){
-
-        return null;
     }
 }
 
