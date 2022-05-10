@@ -14,7 +14,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 
-/**This class exports the calculations derived from the other classes and sends them to an excel spreadsheet.
+/**This class exports the calculations derived from the other classes and sends them to an Excel spreadsheet.
  *
  */
 public class OutputExcel {
