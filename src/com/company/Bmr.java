@@ -1,3 +1,6 @@
+/**This class utilizes the inputs from the InitialInputs class and uses them to calculate BMR and print it out for the user.
+ *@author Haig, Austin, Hunter, Jimmy, and Yesiah
+ */
 package com.company;
 
 //import static com.company.InitialInputs.*;
@@ -20,6 +23,9 @@ public class Bmr {
     public Bmr() {
     }
 
+    /**This method uses the gender input to choose a calculation then uses the inputs for weight, height, and age to calculate base BMR.
+     * @return: double
+     */
     public static double getBmr(){
         switch(gender){
             case 'M','m':
@@ -42,7 +48,9 @@ public class Bmr {
         return Bmr;
     }
 
-
+    /**Main method for the BMR class, prints out the BMR that has been calculated.
+     *
+     */
     public static void main(){
         System.out.println("Your bmr is: "+ getBmr());
 

@@ -1,9 +1,17 @@
+/**This class asks for user input to indicate activity level then prints out an adjusted BMR.
+ **@author Haig, Austin, Hunter, Jimmy, and Yesiah
+ */
 package com.company;
 import java.util.Scanner;
 public class Activity extends Bmr{
     public Activity() {
         super();
     }
+
+    /**This is the main method of the Activity class that collects the inputs and prints out an adjusted BMR.
+     * this class is an example of inheritance and extends Bmr.
+     * @param args
+     */
     public static void main(String[] args) {}
         public void activitymain(){
                Scanner sc = new Scanner(System.in);
