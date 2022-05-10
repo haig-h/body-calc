@@ -37,19 +37,17 @@ public class OutputExcel {
             cell.setCellValue(columnHeadings[i]);
             cell.setCellStyle(headerStyle);
         }
-        //7
-        int b = 1;
-        while(b == 1) {
-            Row row = spreadsheet.createRow(1);
-            Cell cells = row.createCell(0);
-            row.createCell(0).setCellValue(InitialInputs.getName());
-            row.createCell(1).setCellValue(InitialInputs.getBodyWeight());
-            row.createCell(2).setCellValue(InitialInputs.getHeight());
-            row.createCell(3).setCellValue(InitialInputs.getAge());
-            row.createCell(4).setCellValue(Bmr.getBmr());
-            b++;
-        }
+       //     Row r0 = spreadsheet.createRow(0);
+        //    r0.createCell(0).setCellValue(InitialInputs.getName());
 
+           /*
+            Cell cells = row.createCell(5);
+            cells.setCellValue(InitialInputs.getName());
+            cells.setCellValue(InitialInputs.getBodyWeight());
+            cells.setCellValue(InitialInputs.getHeight());
+            cells.setCellValue(InitialInputs.getAge());
+            cells.setCellValue(Bmr.getBmr());
+        */
 
        /* for(int i=0;i<columnHeadings.length;i++){
             spreadsheet.autoSizeColumn(i);
