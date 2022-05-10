@@ -24,7 +24,7 @@ public class OutputExcel {
         XSSFWorkbook workbook = new XSSFWorkbook();
         XSSFSheet spreadsheet = workbook.createSheet("Body Calculator");
 
-        String[] columnHeadings = {"Name","Weight","Height","Age","Gender","BMR","BMR + Activity"};
+        String[] columnHeadings = {"Name","Weight","Height","Age","Gender","BMR"};
         Font headerFont = workbook.createFont();
         headerFont.setBold(true);
 
@@ -39,20 +39,14 @@ public class OutputExcel {
         }
         //7
 
-        int rownum = 1;
-        int b = 0;
-        for(b = 0; b>7; b++){
-            Row row = spreadsheet.createRow(rownum++);
+            /*
+            Row row = spreadsheet.createRow(1);
             row.createCell(0).setCellValue(InitialInputs.getName());
             row.createCell(1).setCellValue(InitialInputs.getBodyWeight());
             row.createCell(2).setCellValue(InitialInputs.getHeight());
             row.createCell(3).setCellValue(InitialInputs.getAge());
             row.createCell(4).setCellValue(Bmr.getBmr());
-            row.createCell(5).setCellValue(InitialInputs.getName());
-            row.createCell(6).setCellValue(InitialInputs.getName());
-
-
-        }
+           */
 
         for(int i=0;i<columnHeadings.length;i++){
             spreadsheet.autoSizeColumn(i);
