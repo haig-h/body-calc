@@ -23,6 +23,10 @@ public class OutputExcel {
     /**This is the main method for the class, and it sends the calculated numbers to the Excel spreadsheet if the user chooses.
      * @throws Exception
      */
+
+    class Person{
+
+    }
     public static void main() throws Exception
 
     {
@@ -46,8 +50,16 @@ public class OutputExcel {
             Object[] dataSet = {InitialInputs.getName(), InitialInputs.getBodyWeight(), InitialInputs.getHeight(), InitialInputs.getAge(), InitialInputs.getGender(), Bmr.getBmr()};
 
             Row r0 = spreadsheet.createRow(1);
-            Cell cells = r0.createCell(dataSet.length);
-            cells.setCellValue(dataSet[dataSet.length]);
+            Cell cells = r0.createCell(-1);
+
+            for(int i = 0; i < dataSet.length; i++) {
+                if (i == 0) {
+                    cells[i].setCellValue(dataSet[i]);
+                } else{
+                    cells[i].setCellValue(Double.parseDouble(dataSet[i]));
+                }
+            }
+
 
 
         for(int i=0;i<columnHeadings.length;i++){
