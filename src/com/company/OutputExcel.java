@@ -1,18 +1,13 @@
 package com.company;
 
 import java.io.File;
-import java.lang.Class;
 
-import org.apache.logging.log4j.LogManager;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.FileOutputStream;
 import java.util.*;
-import java.util.logging.Logger;
-
-import static com.company.InitialInputs.*;
 
 /**This class exports the calculations derived from the other classes and sends them to an Excel spreadsheet.
  */

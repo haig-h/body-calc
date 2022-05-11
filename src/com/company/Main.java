@@ -22,7 +22,7 @@ public class Main {
             bmr();
             activity();
             outputExcel();
-            System.out.println("Would you like to run again? \n Y for Yes N for No");
+            System.out.println("Would you like to run again? \nY for Yes N for No");
             ans = sc.next().charAt(0);
             ans = Character.toUpperCase(ans);
         } while (ans == 'Y');
