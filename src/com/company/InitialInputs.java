@@ -3,7 +3,7 @@ package com.company;
 
 import java.util.Scanner;
 /**This class is used to ask the user for inputs and store them until they are passed to the Bmr class to complete calculations.
- *@author Haig, Austin, Hunter, Jimmy, and Yesiah
+ *@author Haig, Austin, Hunter, Jimmy, and  Jahan
  */
 public class InitialInputs {
     private static String name;
@@ -89,9 +89,9 @@ public class InitialInputs {
     }
     public static double setAge(){
         return age = age;
-        /**This is a set method for the input gender
-         */
     }
+    /**This is a set method for the input gender
+     */
     public static char setGender(){
         return gender = gender;
     }

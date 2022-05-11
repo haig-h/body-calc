@@ -1,11 +1,11 @@
-/**This class utilizes the inputs from the InitialInputs class and uses them to calculate BMR and print it out for the user.
- *@author Haig, Austin, Hunter, Jimmy, and Yesiah
- */
 package com.company;
 
 //import static com.company.InitialInputs.*;
 //determines int for male/female
 
+/**This class utilizes the inputs from the InitialInputs class and uses them to calculate BMR and print it out for the user.
+ *@author Haig, Austin, Hunter, Jimmy, and  Jahan
+ */
 public class Bmr {
     private static double weight = InitialInputs.setBodyWeight();
     private static double height = InitialInputs.setHeight();
@@ -13,6 +13,13 @@ public class Bmr {
     private static char gender = InitialInputs.setGender();
     static double Bmr;
 
+    /**This is a construtor with double, double, double, char parameters.
+     *
+     * @param weight
+     * @param height
+     * @param age
+     * @param gender
+     */
     public Bmr(double weight, double height, double age, char gender){
         this.weight = weight;
         this.height = height;
@@ -20,11 +27,13 @@ public class Bmr {
         this.gender = gender;
     }
 
+    /**
+     * This is an empty constructor.
+     */
     public Bmr() {
     }
 
     /**This method uses the gender input to choose a calculation then uses the inputs for weight, height, and age to calculate base BMR.
-     * @return: double
      */
     public static double getBmr(){
         switch(gender){

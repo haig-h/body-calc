@@ -1,14 +1,18 @@
-/**This is the main class where all other classes are called to complete their function.
- * @author Haig, Austin, Hunter, Jimmy, and Yesiah
- * @version 1.0
- */
+
 package com.company;
 
 import java.util.Scanner;
-
+/**This is the main class where all other classes are called to complete their function.
+ * @author Haig, Austin, Hunter, Jimmy, and  Jahan
+ * @version 1.0
+ */
 public class Main {
 
-
+    /**
+     * This is the main method of the Main class where all of the necessary methods are called.
+     * @param args
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         System.out.println("Welcome to the Body Calculator");
@@ -17,7 +21,7 @@ public class Main {
             initial();
             bmr();
             activity();
-            outputExcel();
+            //outputExcel();
             System.out.println("Would you like to run again? \n Y for Yes N for No");
             ans = sc.next().charAt(0);
             ans = Character.toUpperCase(ans);

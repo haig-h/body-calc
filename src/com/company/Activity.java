@@ -1,8 +1,9 @@
-/**This class asks for user input to indicate activity level then prints out an adjusted BMR.
- **@author Haig, Austin, Hunter, Jimmy, and Yesiah
- */
 package com.company;
 import java.util.Scanner;
+/**This class asks for user input to indicate activity level then prints out an adjusted BMR.
+ **@author Haig, Austin, Hunter, Jimmy, and  Jahan
+ * This class is an example of inheritance and extends Bmr.
+ */
 public class Activity extends Bmr{
     public static double getAdjusted(){
         return adjusted;
@@ -13,13 +14,15 @@ public class Activity extends Bmr{
 
     }
 
-    /**This is the main method of the Activity class that collects the inputs and prints out an adjusted BMR.
-     * this class is an example of inheritance and extends Bmr.
+    /**This is the main method of the Activity class.
      * @param args
      */
     public static void main(String[] args) {}
     private static double adjusted = 0;
 
+    /**This collects the inputs and prints out an adjusted BMR based upon the inputs.
+     * @return
+     */
     public double activitymain(){
                Scanner sc = new Scanner(System.in);
                System.out.println("Please indicate your level of activity. Press 1 for sedentary, 2 for lightly active ");

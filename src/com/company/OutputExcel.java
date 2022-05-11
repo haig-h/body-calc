@@ -15,11 +15,12 @@ import java.util.Set;
 import java.util.TreeMap;
 
 /**This class exports the calculations derived from the other classes and sends them to an Excel spreadsheet.
- *
  */
 public class OutputExcel {
 
-
+    /**This is the main method for the class, and it sends the calculated numbers to the Excel spreadsheet if the user chooses.
+     * @throws Exception
+     */
     public static void main() throws Exception
 
     {
@@ -39,22 +40,20 @@ public class OutputExcel {
             cell.setCellValue(columnHeadings[i]);
             cell.setCellStyle(headerStyle);
         }
-       //     Row r0 = spreadsheet.createRow(0);
-        //    r0.createCell(0).setCellValue(InitialInputs.getName());
+            Row r0 = spreadsheet.createRow(0);
+            r0.createCell(0).setCellValue(InitialInputs.getName());
 
-           /*
+
             Cell cells = row.createCell(5);
             cells.setCellValue(InitialInputs.getName());
             cells.setCellValue(InitialInputs.getBodyWeight());
             cells.setCellValue(InitialInputs.getHeight());
             cells.setCellValue(InitialInputs.getAge());
             cells.setCellValue(Bmr.getBmr());
-        */
 
-       /* for(int i=0;i<columnHeadings.length;i++){
+        for(int i=0;i<columnHeadings.length;i++){
             spreadsheet.autoSizeColumn(i);
         }
-        */
 
 
 
