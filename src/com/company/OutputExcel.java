@@ -1,6 +1,7 @@
 package com.company;
 
 import java.io.File;
+import java.lang.Class;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.Font;
@@ -24,12 +25,9 @@ public class OutputExcel {
      * @throws Exception
      */
 
-    class Person{
 
-    }
-    public static void main() throws Exception
 
-    {
+    public static void main() throws Exception {
         XSSFWorkbook workbook = new XSSFWorkbook();
         XSSFSheet spreadsheet = workbook.createSheet("Body Calculator");
 
@@ -47,17 +45,15 @@ public class OutputExcel {
             cell.setCellStyle(headerStyle);
         }
 
-            Object[] dataSet = {InitialInputs.getName(), InitialInputs.getBodyWeight(), InitialInputs.getHeight(), InitialInputs.getAge(), InitialInputs.getGender(), Bmr.getBmr()};
+
+
+            String[] dataSet = {InitialInputs.getName(), String.valueOf(InitialInputs.getBodyWeight()), String.valueOf(InitialInputs.getHeight()), String.valueOf(InitialInputs.getAge()), String.valueOf(InitialInputs.getGender()), String.valueOf(Bmr.getBmr())};
 
             Row r0 = spreadsheet.createRow(1);
             Cell cells = r0.createCell(-1);
 
             for(int i = 0; i < dataSet.length; i++) {
-                if (i == 0) {
-                    cells[i].setCellValue(dataSet[i]);
-                } else{
-                    cells[i].setCellValue(Double.parseDouble(dataSet[i]));
-                }
+                    cells.setCellValue(dataSet[i]);
             }
 
 
