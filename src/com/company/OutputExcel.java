@@ -14,6 +14,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 
+import static com.company.InitialInputs.*;
+
 /**This class exports the calculations derived from the other classes and sends them to an Excel spreadsheet.
  */
 public class OutputExcel {
@@ -40,16 +42,13 @@ public class OutputExcel {
             cell.setCellValue(columnHeadings[i]);
             cell.setCellStyle(headerStyle);
         }
-            Row r0 = spreadsheet.createRow(0);
-            r0.createCell(0).setCellValue(InitialInputs.getName());
 
+            Object[] dataSet = {InitialInputs.getName(), InitialInputs.getBodyWeight(), InitialInputs.getHeight(), InitialInputs.getAge(), InitialInputs.getGender(), Bmr.getBmr()};
 
-            Cell cells = row.createCell(5);
-            cells.setCellValue(InitialInputs.getName());
-            cells.setCellValue(InitialInputs.getBodyWeight());
-            cells.setCellValue(InitialInputs.getHeight());
-            cells.setCellValue(InitialInputs.getAge());
-            cells.setCellValue(Bmr.getBmr());
+            Row r0 = spreadsheet.createRow(1);
+            Cell cells = r0.createCell(dataSet.length);
+            cells.setCellValue(dataSet[dataSet.length]);
+
 
         for(int i=0;i<columnHeadings.length;i++){
             spreadsheet.autoSizeColumn(i);

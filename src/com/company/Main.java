@@ -21,7 +21,7 @@ public class Main {
             initial();
             bmr();
             activity();
-            //outputExcel();
+            outputExcel();
             System.out.println("Would you like to run again? \n Y for Yes N for No");
             ans = sc.next().charAt(0);
             ans = Character.toUpperCase(ans);
