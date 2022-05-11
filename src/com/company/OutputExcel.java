@@ -2,18 +2,15 @@ package com.company;
 
 import java.io.File;
 import java.lang.Class;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.Font;
-import org.apache.poi.ss.usermodel.Row;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.FileOutputStream;
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
+import java.util.*;
+import java.util.logging.Logger;
 
 import static com.company.InitialInputs.*;
 
@@ -28,6 +25,7 @@ public class OutputExcel {
 
 
     public static void main() throws Exception {
+
         XSSFWorkbook workbook = new XSSFWorkbook();
         XSSFSheet spreadsheet = workbook.createSheet("Body Calculator");
 
@@ -46,25 +44,28 @@ public class OutputExcel {
         }
 
 
-
+            /*
+            Not working idk
             String[] dataSet = {InitialInputs.getName(), String.valueOf(InitialInputs.getBodyWeight()), String.valueOf(InitialInputs.getHeight()), String.valueOf(InitialInputs.getAge()), String.valueOf(InitialInputs.getGender()), String.valueOf(Bmr.getBmr())};
-
+            Person p = new Person(InitialInputs.getName(),InitialInputs.getBodyWeight(), InitialInputs.getHeight(),InitialInputs.getAge(), InitialInputs.getGender(), Bmr.getBmr());
             Row r0 = spreadsheet.createRow(1);
-            Cell cells = r0.createCell(-1);
+            Cell cells = r0.createCell(0, CellType.valueOf(p.name));
 
-            for(int i = 0; i < dataSet.length; i++) {
-                    cells.setCellValue(dataSet[i]);
-            }
-
-
+            cells.setCellValue(p.name);
+            cells.setCellValue(p.bodyWeight);
+            cells.setCellValue(p.height);
+            cells.setCellValue(p.age);
+            cells.setCellValue(p.gender);
+            cells.setCellValue(p.bmr);
+            */
 
         for(int i=0;i<columnHeadings.length;i++){
-            spreadsheet.autoSizeColumn(i);
+        spreadsheet.autoSizeColumn(i);
         }
 
 
-
-        File f = new File("C:\\GitHub Repositories\\body-calc\\Test.xls");
+        Random random = new Random();
+        File f = new File("C:\\Users\\"+System.getProperty("user.name")+"\\Documents\\"+random.nextInt(30)+".xls");
         FileOutputStream fos = new FileOutputStream(f);
         workbook.write(fos);
         fos.close();
